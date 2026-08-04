@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — AllerWatch</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="legal-page">
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark"></div>
+    <span class="brand-name">AllerWatch</span>
+  </div>
+</header>
+
+<main>
+<a class="back-link" href="index.html">&larr; Back to AllerWatch</a>
+
+<h1>Privacy Policy — AllerWatch</h1>
+<p class="updated">Last updated: August 1, 2026</p>
+
+<p>AllerWatch ("we", "us", "the app") respects your privacy. This document explains what data
+the app collects, why, and your rights regarding it.</p>
+
+<p>AllerWatch helps you log meals and food reactions so you can spot patterns in what triggers
+your allergies. Because of this, some of the data the app handles is <strong>health-adjacent</strong>
+— specifically, the food reactions and symptoms you choose to log. We treat this data with
+particular care: we do not sell it, we do not share it with anyone beyond the service
+providers listed below (each of which processes it only on our behalf, to run the app), and
+you can request its deletion at any time.</p>
+
+<h2>1. Data we collect</h2>
+<table>
+<tr><th>Category</th><th>Source</th><th>Why we collect it</th></tr>
+<tr><td>Name, email address</td><td>Supabase Auth / Google Sign-In</td><td>To create and secure your account</td></tr>
+<tr><td>Auth tokens</td><td>Supabase Auth</td><td>To keep you signed in securely</td></tr>
+<tr><td>Known allergies</td><td>Supabase (<code>profiles</code> table)</td><td>To power in-app allergen warnings</td></tr>
+<tr><td>Meal logs — dish names, ingredients, cooking methods, meal type, timestamps</td><td>Supabase (<code>meals</code> table)</td><td>Core app function: your meal history</td></tr>
+<tr><td>Reaction logs — symptoms, severity, notes, linked meal IDs</td><td>Supabase (<code>reactions</code> table)</td><td>Core app function: pattern/trigger detection</td></tr>
+<tr><td>Dish name (text only, no personal info)</td><td>Sent to OpenRouter → Google Gemini, via our <code>resolve-dish</code> server function</td><td>To automatically resolve a dish into likely ingredients and cooking method</td></tr>
+<tr><td>Spoken audio (transcription only)</td><td>Android's on-device speech recognizer (typically Google's)</td><td>To let you log a meal by voice instead of typing — the app never touches or stores the raw audio itself, only the transcribed text it gets back</td></tr>
+<tr><td>Purchase history, anonymous purchaser ID</td><td>RevenueCat</td><td>To manage your subscription and unlock premium features</td></tr>
+<tr><td>App events, device identifiers, approximate location (from IP)</td><td>PostHog</td><td>Product analytics, to understand how the app is used</td></tr>
+<tr><td>App events, device identifiers</td><td>Firebase Analytics</td><td>Product analytics</td></tr>
+<tr><td>Crash logs, device info, OS version, app build</td><td>Firebase Crashlytics</td><td>To diagnose and fix crashes</td></tr>
+<tr><td>Push notification token</td><td>Firebase Cloud Messaging</td><td>To deliver your daily reaction-reminder notification</td></tr>
+</table>
+
+<h2>2. How we use your data</h2>
+<ul>
+<li>To create, secure, and let you sign in to your account.</li>
+<li>To store your meal and reaction history so the app can function as a food/allergy log.</li>
+<li>To detect patterns in your own history and surface likely trigger foods and cooking methods.</li>
+<li>To resolve a dish name into likely ingredients when you log a meal.</li>
+<li>To manage your subscription and unlock premium features.</li>
+<li>To send you the daily reaction-reminder notification, if enabled.</li>
+<li>To understand app usage and fix bugs, via analytics and crash reporting.</li>
+</ul>
+
+<h2>3. Sharing</h2>
+<p>We do not sell your personal data. The third-party services listed above process data on our
+behalf, strictly to provide the functionality described:</p>
+<ul>
+<li><strong>Supabase</strong> (Supabase Inc., <a href="https://supabase.com/privacy">supabase.com/privacy</a>) — authentication and database hosting for your account, meals, allergies, and reactions. Data is hosted in the <code>ap-northeast-1</code> (Tokyo) region.</li>
+<li><strong>Google Sign-In / Android Speech Recognizer</strong> (Google LLC, <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>) — sign-in, and on-device/system speech-to-text for voice meal logging.</li>
+<li><strong>OpenRouter</strong> (<a href="https://openrouter.ai/privacy">openrouter.ai/privacy</a>), which routes the dish-name text to <strong>Google Gemini</strong> for ingredient resolution — only the dish name itself is sent (e.g. "chicken karahi"), never your name, email, or health/reaction data.</li>
+<li><strong>RevenueCat</strong> (<a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>) — subscription and payment management.</li>
+<li><strong>PostHog</strong> (PostHog Inc., <a href="https://posthog.com/privacy">posthog.com/privacy</a>) — product analytics.</li>
+<li><strong>Firebase</strong> (Google LLC, <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>) — analytics, crash reporting (Crashlytics), and push notifications (Cloud Messaging).</li>
+</ul>
+<p>None of these providers are permitted to use your data for their own purposes beyond
+providing the service to us.</p>
+
+<h2>4. Your rights</h2>
+<p>You can:</p>
+<ul>
+<li>Delete your account and all associated data at any time by emailing <strong>attaf.sheikh03@gmail.com</strong>.</li>
+<li>Opt out of analytics from within the app's settings.</li>
+<li>Request a copy of your data by emailing the same address.</li>
+</ul>
+<p>Data is fully purged within <strong>30 days</strong> of a deletion request.</p>
+
+<h2>5. Security</h2>
+<p>Data is encrypted in transit (HTTPS/TLS) between the app and every service listed above.
+Any secrets stored locally on your device are encrypted at rest using Android
+Keystore-backed AES-GCM encryption.</p>
+
+<h2>6. Children</h2>
+<p>AllerWatch is not directed at children under 13, and we do not knowingly collect data
+from children under 13.</p>
+
+<h2>7. International transfers / GDPR</h2>
+<p>If you are located in the European Economic Area (EEA), you have rights under the
+General Data Protection Regulation (GDPR), including the right to access, correct, delete,
+or export your data, and to object to or restrict certain processing. Your data may be
+transferred to and processed in countries outside the EEA (including Japan, where our
+database is hosted, and the United States, where some of our service providers operate)
+under appropriate safeguards. To exercise any of these rights, contact us at
+<strong>attaf.sheikh03@gmail.com</strong>.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>We will update this page when our practices change. The "Last updated" date at the top
+reflects the most recent change.</p>
+
+<h2>9. Contact</h2>
+<p>Privacy questions: <strong>attaf.sheikh03@gmail.com</strong>. AllerWatch, Pakistan.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms of service</a>
+    </div>
+    <p>&copy; 2026 AllerWatch. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

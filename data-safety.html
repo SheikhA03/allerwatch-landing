@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Safety — AllerWatch</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="legal-page">
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark"></div>
+    <span class="brand-name">AllerWatch</span>
+  </div>
+</header>
+
+<main>
+<a class="back-link" href="index.html">&larr; Back to AllerWatch</a>
+
+<h1>Play Data Safety — AllerWatch</h1>
+<p class="updated">Generated August 1, 2026. This page is a reference for filling Play Console's Data safety form — not linked from the site navigation.</p>
+
+<h2>Data collection and security</h2>
+<ul>
+<li><strong>Does your app collect or share any of the required user data types?</strong> Yes</li>
+<li><strong>Is all of the user data collected by your app encrypted in transit?</strong> Yes</li>
+<li><strong>Do you provide a way for users to request that their data is deleted?</strong> Yes — by emailing attaf.sheikh03@gmail.com. Data is fully purged within 30 days.</li>
+<li><strong>Account creation method:</strong> OAuth (Google Sign-In via Supabase Auth).</li>
+</ul>
+
+<h2>Data types collected</h2>
+<table>
+<tr><th>Data type</th><th>Collected</th><th>Ephemeral</th><th>Required / choose</th><th>Shared</th><th>Purpose</th><th>Source</th></tr>
+<tr><td>Personal info → Name</td><td>Yes</td><td>No</td><td>Required</td><td>No</td><td>Account management</td><td>Supabase Auth / Google Sign-In</td></tr>
+<tr><td>Personal info → Email address</td><td>Yes</td><td>No</td><td>Required</td><td>No</td><td>Account management</td><td>Supabase Auth / Google Sign-In</td></tr>
+<tr><td>Personal info → User IDs</td><td>Yes</td><td>No</td><td>Required</td><td>No</td><td>Account management</td><td>Supabase Auth</td></tr>
+<tr><td>Financial info → Purchase history</td><td>Yes</td><td>No</td><td>Required</td><td>No</td><td>App functionality</td><td>RevenueCat</td></tr>
+<tr><td>Location → Approximate location</td><td>Yes</td><td>No</td><td>Users can choose</td><td>No</td><td>Analytics</td><td>PostHog (from IP)</td></tr>
+<tr><td>Health and fitness → Health info</td><td>Yes</td><td>No</td><td>Required</td><td>No</td><td>App functionality</td><td>Supabase (meals, reactions tables)</td></tr>
+<tr><td>App info and performance → Crash logs</td><td>Yes</td><td>No</td><td>Users can choose</td><td>No</td><td>Analytics</td><td>Firebase Crashlytics</td></tr>
+<tr><td>App info and performance → Diagnostics</td><td>Yes</td><td>No</td><td>Users can choose</td><td>No</td><td>Analytics</td><td>Firebase Crashlytics</td></tr>
+<tr><td>App activity → App interactions</td><td>Yes</td><td>No</td><td>Users can choose</td><td>No</td><td>Analytics</td><td>PostHog, Firebase Analytics</td></tr>
+<tr><td>App activity → Other user-generated content</td><td>Yes</td><td>No</td><td>Required</td><td><strong>Yes</strong></td><td>App functionality</td><td>Supabase (meals table) — dish name also shared with OpenRouter → Google Gemini for ingredient resolution</td></tr>
+<tr><td>Device or other IDs</td><td>Yes</td><td>No</td><td>Users can choose</td><td>No</td><td>Analytics</td><td>PostHog, Firebase Analytics, Firebase Crashlytics, FCM</td></tr>
+</table>
+
+<h2>Not declared</h2>
+<p><strong>Audio/voice recordings.</strong> AllerWatch uses Android's system speech recognizer for
+voice meal-logging, but the app never receives, stores, or transmits the raw audio itself —
+only the transcribed text comes back to the app. Per Play's guidance this pass-through case
+doesn't require an Audio declaration. This is a judgment call, not a certainty — flag it to a
+lawyer for a second opinion if needed.</p>
+
+<p><strong>Precise location.</strong> A location permission exists in unused template code
+inherited from the kit; no AllerWatch screen requests it, so nothing to declare.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+    </div>
+    <p>&copy; 2026 AllerWatch. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
