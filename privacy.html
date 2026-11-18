@@ -41,7 +41,7 @@ you can request its deletion at any time.</p>
 <tr><td>Reaction logs — symptoms, severity, notes, linked meal IDs</td><td>Supabase (<code>reactions</code> table)</td><td>Core app function: pattern/trigger detection</td></tr>
 <tr><td>Dish name (text only, no personal info)</td><td>Sent to OpenRouter → Google Gemini, via our <code>resolve-dish</code> server function</td><td>To automatically resolve a dish into likely ingredients and cooking method</td></tr>
 <tr><td>Spoken audio (transcription only)</td><td>Android's on-device speech recognizer (typically Google's)</td><td>To let you log a meal by voice instead of typing — the app never touches or stores the raw audio itself, only the transcribed text it gets back</td></tr>
-<tr><td>Purchase history, anonymous purchaser ID</td><td>RevenueCat</td><td>To manage your subscription and unlock premium features</td></tr>
+<tr><td>Purchase history, your account's random ID (no name or email)</td><td>RevenueCat</td><td>To manage your subscription and unlock premium features</td></tr>
 <tr><td>App events, device identifiers, approximate location (from IP)</td><td>PostHog</td><td>Product analytics, to understand how the app is used</td></tr>
 <tr><td>App events, device identifiers</td><td>Firebase Analytics</td><td>Product analytics</td></tr>
 <tr><td>Crash logs, device info, OS version, app build</td><td>Firebase Crashlytics</td><td>To diagnose and fix crashes</td></tr>
